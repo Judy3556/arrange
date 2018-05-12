@@ -18,8 +18,9 @@ namespace arrange_all
             string[] name = { "葉俊廷", "張澤瑜", "王程捷", "江儀婷", "張秉華", "陳柏霖", "黃紀瑜", "黃昱維", "蔡逸群", "登琳", "世新魏鈞孝吧", "劉定南", "陳信如", "童信傑", "李岳倫", "鄒和恆", "簡毓玟", "劉子瑄", "蕭紹洋", "李亞宸la", "張以潔", "邱仕紳", "呂家瑩", "世新林鑫佑", "徐均得", "陳佳欣", "張恩瑋", "周詮", "王湘婷", "蕭宇成", "Max Cheung(BANG)", "馬嘉誠", "陳昱嘉", "康珈熏", "盧奕宏", "黃博涵", "遲正雯", "世新林星彤", "許晏誠　", "許子安", "高子晴", "陳思婷", "矝鵘鮿", "余彥廷", "吳耀輝", "鄭丞智", "林冠廷", "世新何曜宇", "邵喬雨", "張豐愷", "林子晴", "邱雁回", "陳家欣是韓妞", "鄧雅馨", "謝汶珊", "李曼寧", "世新徐偉哲", "张钰慈", "鍾宜珊", "raer_tsai", "世新李姳諼", "鄭曼君", "世新陳柏霖", "世新許子安", "世新方若帆" };
             int[] height = { 173, 170, 179, 155, 183, 170, 163, 174, 165, 189, 177, 180, 154, 170, 170, 173, 165, 158, 180, 165, 153, 175, 162, 165, 0, 160, 165, 173, 164, 177, 177, 180, 170, 151, 176, 180, 168, 152, 180, 180, 165, 155, 180, 173, 169, 170, 169, 171, 190, 170, 150, 160, 155, 164, 163, 165, 184, 170, 155, 170, 168, 160, 169, 0, 150 };
 
-            Console.WriteLine(" 根據不完全統計：");
             Console.WriteLine();
+            Console.WriteLine(" 根據不完全統計：");
+            Console.WriteLine(" ————————————————————");
 
             //定義用於血型統計的數
             int O = 0;
@@ -58,10 +59,10 @@ namespace arrange_all
             Console.WriteLine(" A型血的人數為" + A + "人，佔比為" +Math.Round(a) + "% ");
             Console.WriteLine(" B型血的人數為" + B + "人， 佔比為" + Math.Round(b) + "% ");
             Console.WriteLine(" AB型血的人數為" + C +"人，佔比為" + Math.Round(ab) + "% ");
-            Console.WriteLine();
+            Console.WriteLine(" ————————————————————");
 
             //定義用來放人數的變量
-            int girlN=0;
+            int girlN =0;
             int boyN=0;
 
             //計算男生女生人數
@@ -83,7 +84,7 @@ namespace arrange_all
 
             Console.WriteLine(" 遊戲一甲的男生人數為"+boyN+"人，且占全班的"+Math.Round(bN)+"%");
             Console.WriteLine(" 遊戲一甲的女生人數為"+girlN+"人，且佔全班的"+Math.Round(gN)+"%");
-            Console.WriteLine();
+            Console.WriteLine(" ————————————————————");
 
             //定義變量用於裝總身高和人數
             int boyH = 0;
@@ -115,10 +116,13 @@ namespace arrange_all
             Console.WriteLine(" 男生身高平均為"+Math.Round(bH)+"cm");
             Console.WriteLine(" 女生身高平均為"+Math.Round(gH)+"cm");
             Console.WriteLine(" 全班的平均身高為" + Math.Round(allH)+"cm");
-            Console.WriteLine();
+            Console.WriteLine(" ————————————————————");
 
+            //設定最高最小身高的預設值
             int maxH = -1;
             int minH = 1000;
+
+            //推出全班身高的極值
             for(int m = 0; m < height.Length; m++)
             {
                 if (maxH < height[m])
@@ -129,8 +133,8 @@ namespace arrange_all
                 {
                     minH = height[m];
                 }
-                
             }
+
             Console.WriteLine(" 班裡最矮身高為"+minH+"cm，班裡最高身高為"+maxH+"cm");
 
             Console.ReadLine();
