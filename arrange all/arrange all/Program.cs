@@ -20,7 +20,8 @@ namespace arrange_all
 
             Console.WriteLine(" 根據不完全統計：");
             Console.WriteLine();
-            //定義用於統計的數
+
+            //定義用於血型統計的數
             int O = 0;
             int A = 0;
             int B = 0;
@@ -33,15 +34,15 @@ namespace arrange_all
                 {
                    O++;
                 }
-                if (blood[j] == "A")
+                else if (blood[j] == "A")
                 {
                     A++;
                 }
-                if (blood[j] == "B")
+                else if (blood[j] == "B")
                 {
                     B++;
                 }
-                if (blood[j] == "AB")
+                else if (blood[j] == "AB")
                 {
                     C++;
                 }
@@ -57,6 +58,32 @@ namespace arrange_all
             Console.WriteLine(" A型血的人數為" + A + "，佔比為" +Math.Round(a) + "% ");
             Console.WriteLine(" B型血的人數為" + B + "， 佔比為" + Math.Round(b) + "% ");
             Console.WriteLine(" AB型血的人數為" + C +"，佔比為" + Math.Round(ab) + "% ");
+            Console.WriteLine();
+
+            //定義用來放人數的變量
+            int girlN=0;
+            int boyN=0;
+
+            //計算男生女生人數
+            for(int n = 0; n < fm.Length; n++)
+            {
+                if (fm[n] == "男")
+                {
+                    boyN++;
+                }
+                else if (fm[n] == "女")
+                {
+                    girlN++;
+                }
+            }
+
+            //計算人數百分比
+            double gN = (double)girlN / fm.Length * 100;
+            double bN = (double)boyN / fm.Length * 100;
+
+            Console.WriteLine(" 遊戲一甲的男生人數為"+boyN+"，且占全班的"+Math.Round(bN)+"%");
+            Console.WriteLine(" 遊戲一甲的女生人數為"+girlN+"，且佔全班的"+Math.Round(gN)+"%");
+
             Console.ReadLine();
 
         }
