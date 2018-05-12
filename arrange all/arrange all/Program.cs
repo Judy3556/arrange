@@ -115,6 +115,23 @@ namespace arrange_all
             Console.WriteLine(" 男生身高平均為"+Math.Round(bH)+"cm");
             Console.WriteLine(" 女生身高平均為"+Math.Round(gH)+"cm");
             Console.WriteLine(" 全班的平均身高為" + Math.Round(allH)+"cm");
+            Console.WriteLine();
+
+            int maxH = -1;
+            int minH = 1000;
+            for(int m = 0; m < height.Length; m++)
+            {
+                if (maxH < height[m])
+                {
+                    maxH = height[m];
+                }
+                if (minH > height[m])
+                {
+                    minH = height[m];
+                }
+                
+            }
+            Console.WriteLine(" 班裡最矮身高為"+minH+"cm，班裡最高身高為"+maxH+"cm");
 
             Console.ReadLine();
 
